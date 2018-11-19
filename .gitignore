@@ -1,0 +1,4 @@
+.env
+*.png
+backups
+node_modules

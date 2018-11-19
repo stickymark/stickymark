@@ -1,0 +1,11 @@
+# default screensizes for screenshots
+screenshot:
+  viewports:
+    - width: 375
+      height: 812
+    - width: 768
+      height: 1024
+    - width: 1024
+      height: 768
+    - width: 1920
+      height: 1080
