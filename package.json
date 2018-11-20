@@ -1,6 +1,6 @@
 {
   "name": "@stickymark/stickymark",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "more permanent bookmarks",
   "main": "index.js",
   "scripts": {
