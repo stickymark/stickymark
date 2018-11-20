@@ -9,3 +9,8 @@ screenshot:
       height: 768
     - width: 1920
       height: 1080
+
+# default options for file storage
+fileStorage:
+  plugin: LocalStorage
+  directory: backups

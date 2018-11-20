@@ -2,6 +2,7 @@ const { json } = require('micro')
 require('dotenv').config()
 
 const getConfig = require('./lib/config')
+const fileStorage = require('./lib/fileStorage')
 const plugins = require('./lib/plugins')
 
 module.exports = async req => {
@@ -9,6 +10,7 @@ module.exports = async req => {
 
 	try {
 		const config = await getConfig()
+		config.fileStorage.handler = new fileStorage[config.fileStorage.plugin](config)
 		const loadedPlugins = plugins(config, body)
 
 		for (let p = 0; p < loadedPlugins.length; p++) {
