@@ -1,7 +1,7 @@
 {
-  "name": "ganesha",
+  "name": "@stickymark/stickymark",
   "version": "0.0.1",
-  "description": "stores your knowledge",
+  "description": "more permanent bookmarks",
   "main": "index.js",
   "scripts": {
     "start": "micro",
