@@ -1,15 +1,14 @@
 const { json } = require('micro')
-const yaml = require('js-yaml')
-const fs = require('fs')
 require('dotenv').config()
 
+const getConfig = require('./lib/config')
 const plugins = require('./lib/plugins')
 
 module.exports = async req => {
 	const body = await json(req)
 
 	try {
-		const config = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf8'))
+		const config = await getConfig()
 		const loadedPlugins = plugins(config, body)
 
 		for (let p = 0; p < loadedPlugins.length; p++) {
@@ -24,8 +23,8 @@ module.exports = async req => {
 		}
 
 		return body.url
-	} catch (e) {
-		console.log(e)
-		return e.message
+	} catch (ex) {
+		console.log(ex)
+		return ex.message
 	}
 }
