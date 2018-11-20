@@ -18,5 +18,20 @@
   },
   "devDependencies": {
     "micro-dev": "^3.0.0"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stickymark/stickymark.git"
+  },
+  "keywords": [
+    "bookmarks",
+    "archive"
+  ],
+  "bugs": {
+    "url": "https://github.com/stickymark/stickymark/issues"
+  },
+  "homepage": "https://github.com/stickymark/stickymark#readme"
 }
